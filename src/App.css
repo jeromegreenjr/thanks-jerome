@@ -1,0 +1,121 @@
+    /* General App Styles */
+    .App {
+        text-align: center;
+        padding: 20px;
+        background-color: #121212; /* Dark background for app */
+        color: #ffffff; /* Text color */
+        min-height: 100vh; /* Full height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    }
+
+    /* ChatBox Styles */
+    .chat-box {
+        width: 80%;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 16px;
+        background-color: #232323; /* Darker background for chatbox */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+        backdrop-filter: blur(10px); /* For a frosted glass effect */
+    }
+
+    .messages {
+        max-height: 300px;
+        overflow-y: auto;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.05); /* Subtle white overlay */
+        border-radius: 12px;
+    }
+
+    input[type="text"],
+    button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease; /* Smooth transition for background */
+    }
+
+    input[type="text"] {
+        width: calc(100% - 140px);
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        margin-right: 10px;
+    }
+
+    button {
+        width: 120px;
+        background: linear-gradient(45deg, #06bcee, #00ff6a); /* Gradient for button */
+        color: #000;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover,
+    button:focus {
+        background: linear-gradient(45deg, #00ff6a, #06bcee); /* Invert gradient on hover */
+        color: #fff;
+    }
+
+    /* Orb Styles */
+    .orb {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #4caf50; /* Green color */
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
+        .App {
+            padding: 10px;
+        }
+
+        .chat-box,
+        .messages {
+            width: 90%;
+            padding: 15px;
+        }
+
+        input[type="text"],
+        button {
+            padding: 10px 15px; /* Adjust padding for touch targets */
+            font-size: 0.9rem; /* Adjust font size for readability */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .App {
+            padding: 5px;
+        }
+
+        .chat-box,
+        .messages {
+            width: 95%;
+            padding: 10px;
+        }
+
+        input[type="text"],
+        button {
+            padding: 8px 10px;
+            font-size: 0.8rem;
+            width: auto;
+            font-size: 0.8rem;
+        }
+
+        button {
+            width: auto;
+            padding: 8px 20px;
+        }
+    }

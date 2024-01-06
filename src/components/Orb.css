@@ -1,0 +1,26 @@
+.orb {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease;
+    opacity: 0.7; /* Default state */
+}
+
+.orb.typing {
+    opacity: 0.85; /* Slightly brighter when user is typing */
+}
+
+.orb.thinking {
+    animation: hoverEffect 1.5s ease-in-out infinite;
+}
+
+.orb.response-ready {
+    background-color: #4caf50; /* Change color when response is ready */
+    opacity: 1; /* Brightest state */
+}
+
+@keyframes hoverEffect {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
